@@ -9,7 +9,7 @@ import { SectionWrapper } from '../hoc'
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
+    <Tilt className="oxs:w-full xs:w-[400px] xl:w-[250px]">
       <motion.div
         variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
@@ -51,7 +51,7 @@ const About = () => {
         I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex justify-center flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
